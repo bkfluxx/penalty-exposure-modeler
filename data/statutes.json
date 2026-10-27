@@ -1,0 +1,509 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-13",
+  "notes": "Statutory penalty ranges for privacy regimes. Amounts are taken from the cited primary text. Where a statute is inflation-adjusted the registry stores the published figures with the adjustment date; update this file when a new adjustment is published. per_violation regimes multiply the count of violations pleaded in the case by the per-violation amount; fixed_or_turnover regimes take the higher of the fixed amount and a percentage of the undertaking's total worldwide annual turnover of the preceding financial year.",
+  "statutes": [
+    {
+      "id": "gdpr-art83-5",
+      "name": "GDPR Art. 83(5) - higher-tier administrative fine",
+      "regime": "EU GDPR",
+      "jurisdiction": "EU/EEA",
+      "enforcer": "Lead supervisory authority (or DPA of the main establishment)",
+      "citation": "Regulation (EU) 2016/679, Art. 83(5)",
+      "scope": "Basic principles for processing incl. consent (Arts. 5, 6, 7, 9); data subject rights (Arts. 12-22); transfers to third countries (Arts. 44-49); Member State law under Chapter IX; non-compliance with an Art. 58(2) order",
+      "penalty_model": "fixed_or_turnover",
+      "fixed_cap": 20000000,
+      "turnover_pct_cap": 0.04,
+      "currency": "EUR",
+      "aggregation": {
+        "rule": "linked_processing_single_ceiling",
+        "citation": "GDPR Art. 83(3)",
+        "description": "If an undertaking infringes several provisions of the Regulation in the same or linked processing operations, the total amount of the fine must not exceed the amount specified for the gravest infringement."
+      },
+      "citation_patterns": ["Art(?:icle)?\\.?\\s*83\\s*\\(\\s*5\\s*\\)"],
+      "notes": "Ceiling applies per infringement against an undertaking; Art. 83(2) factors decide where inside the ceiling the fine lands. Precedent ratios observed in this dataset are far below 1.0 - the ceiling is a legal maximum, not an expectation.",
+      "sources": [
+        {
+          "url": "https://gdpr.eu/article-83-conditions-for-imposing-administrative-fines/",
+          "quote": "Infringements of the following provisions shall, in accordance with paragraph 2, be subject to administrative fines up to 20 000 000 EUR, or in the case of an undertaking, up to 4 % of the total worldwide annual turnover of the preceding financial year, whichever is higher",
+          "quality": "full statutory text reproduced",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-art83-4",
+      "name": "GDPR Art. 83(4) - lower-tier administrative fine",
+      "regime": "EU GDPR",
+      "jurisdiction": "EU/EEA",
+      "enforcer": "Lead supervisory authority",
+      "citation": "Regulation (EU) 2016/679, Art. 83(4)",
+      "scope": "Obligations of controller and processor under Arts. 8, 11, 25-39, 42 and 43; certification bodies (Arts. 42, 43); monitoring body (Art. 41(4))",
+      "penalty_model": "fixed_or_turnover",
+      "fixed_cap": 10000000,
+      "turnover_pct_cap": 0.02,
+      "currency": "EUR",
+      "aggregation": {
+        "rule": "linked_processing_single_ceiling",
+        "citation": "GDPR Art. 83(3)",
+        "description": "Linked processing operations: total fine capped at the amount for the gravest infringement."
+      },
+      "citation_patterns": ["Art(?:icle)?\\.?\\s*83\\s*\\(\\s*4\\s*\\)"],
+      "notes": "Security of processing (Art. 32) and data protection by design (Art. 25) sit in this lower tier, which is why breach cases (British Airways, Marriott) are cited against Art. 83(5)/83(4) in different analyses - check which provision the decision itself cites.",
+      "sources": [
+        {
+          "url": "https://gdpr.eu/article-83-conditions-for-imposing-administrative-fines/",
+          "quote": "Infringements of the following provisions shall, in accordance with paragraph 2, be subject to administrative fines up to 10 000 000 EUR, or in the case of an undertaking, up to 2 % of the total worldwide annual turnover of the preceding financial year, whichever is higher",
+          "quality": "full statutory text reproduced",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-art83-6",
+      "name": "GDPR Art. 83(6) - non-compliance with a supervisory authority order",
+      "regime": "EU GDPR",
+      "jurisdiction": "EU/EEA",
+      "enforcer": "Lead supervisory authority",
+      "citation": "Regulation (EU) 2016/679, Art. 83(6)",
+      "scope": "Non-compliance with an order by the supervisory authority referred to in Art. 58(2)",
+      "penalty_model": "fixed_or_turnover",
+      "fixed_cap": 20000000,
+      "turnover_pct_cap": 0.04,
+      "currency": "EUR",
+      "aggregation": {
+        "rule": "linked_processing_single_ceiling",
+        "citation": "GDPR Art. 83(3)",
+        "description": "Linked processing operations: total fine capped at the amount for the gravest infringement."
+      },
+      "citation_patterns": ["Art(?:icle)?\\.?\\s*83\\s*\\(\\s*6\\s*\\)"],
+      "notes": "Distinct from the periodic penalty payments a supervisory authority may impose under Art. 83(6) read with Art. 58(3) - those are calculated per day and must be recorded with a 'days' value in the case spec.",
+      "sources": [
+        {
+          "url": "https://gdpr.eu/article-83-conditions-for-imposing-administrative-fines/",
+          "quote": "Non-compliance with an order by the supervisory authority as referred to in Article 58(2) shall, in accordance with paragraph 2 of this Article, be subject to administrative fines up to 20 000 000 EUR, or in the case of an undertaking, up to 4 % of the total worldwide annual turnover of the preceding financial year, whichever is higher",
+          "quality": "full statutory text reproduced",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "uk-gdpr-higher",
+      "name": "UK GDPR / DPA 2018 - higher maximum amount",
+      "regime": "UK GDPR",
+      "jurisdiction": "United Kingdom",
+      "enforcer": "Information Commissioner's Office",
+      "citation": "Data Protection Act 2018, ss. 155 and 157(5)",
+      "scope": "Infringements of the UK GDPR where Art. 83 specifies an amount, and failures to comply with an information, assessment, interview or enforcement notice; specified Part 3 and Part 4 failures",
+      "penalty_model": "fixed_or_turnover",
+      "fixed_cap": 17500000,
+      "turnover_pct_cap": 0.04,
+      "currency": "GBP",
+      "aggregation": {
+        "rule": "linked_processing_single_ceiling",
+        "citation": "UK GDPR Art. 83(3)",
+        "description": "Linked processing operations: total fine capped at the amount for the gravest infringement."
+      },
+      "citation_patterns": ["s(?:ection)?\\.?\\s*155\\s*DPA", "higher maximum amount"],
+      "notes": "Ceiling is per infringement but the ICO's fining guidance applies a five-step calculation inside it, including a turnover-based starting point.",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.uk/ukpga/2018/12/section/157",
+          "quote": "The 'higher maximum amount' is, in the case of an undertaking, £17,500,000 or 4% of the undertaking's total annual worldwide turnover in the preceding financial year, whichever is higher",
+          "quality": "primary legislation",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "uk-gdpr-standard",
+      "name": "UK GDPR / DPA 2018 - standard maximum amount",
+      "regime": "UK GDPR",
+      "jurisdiction": "United Kingdom",
+      "enforcer": "Information Commissioner's Office",
+      "citation": "Data Protection Act 2018, ss. 155 and 157(6)",
+      "scope": "UK GDPR infringements where Art. 83 does not specify an amount, and Part 3 / Part 4 failures not listed for the higher maximum",
+      "penalty_model": "fixed_or_turnover",
+      "fixed_cap": 8700000,
+      "turnover_pct_cap": 0.02,
+      "currency": "GBP",
+      "citation_patterns": ["standard maximum amount"],
+      "notes": "Rarely used in practice for UK GDPR breaches because Art. 83 supplies amounts that are imported by s.157(1)(a).",
+      "sources": [
+        {
+          "url": "https://www.legislation.gov.uk/ukpga/2018/12/section/157",
+          "quote": "The 'standard maximum amount' is, in the case of an undertaking, £8,700,000 or 2% of the undertaking's total annual worldwide turnover in the preceding financial year, whichever is higher",
+          "quality": "primary legislation",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "ccpa-ag-1798.155",
+      "name": "CCPA/CPRA - civil penalty in an action by the Attorney General",
+      "regime": "CCPA/CPRA",
+      "jurisdiction": "US-CA",
+      "enforcer": "California Attorney General",
+      "citation": "Cal. Civ. Code s. 1798.155(b)",
+      "scope": "Any violation of the CCPA/CPRA by a business, service provider, contractor or other person, after a 30-day cure period",
+      "penalty_model": "per_violation",
+      "per_violation_amount": 2500,
+      "per_violation_amount_intentional": 7500,
+      "currency": "USD",
+      "aggregation": {
+        "rule": "no_aggregate_cap",
+        "citation": "Cal. Civ. Code s. 1798.155(b)",
+        "description": "The statute sets no aggregate cap: exposure is per violation x count. Every published AG settlement has nevertheless been a lump sum far below the arithmetic ceiling."
+      },
+      "citation_patterns": ["1798\\.155", "1798\\.199\\.90"],
+      "inflation_note": "The CPPA's inflation adjustment (Cal. Civ. Code s. 1798.199.95(d)) put the figures at $2,663 and $7,988 effective 1 January 2025. The adjusted figures come from a secondary source and should be confirmed against the CPPA's own text before use.",
+      "citation_notes": "s.1798.155(a) is the CPPA's administrative fine (same amounts); s.1798.155(b) is the AG's civil penalty.",
+      "sources": [
+        {
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.155",
+          "quote": "Any business, service provider, or other person that violates this title shall be subject to an injunction and liable for a civil penalty of not more than two thousand five hundred dollars ($2,500) for each violation or seven thousand five hundred dollars ($7,500) for each intentional violation",
+          "quality": "primary legislation (California Legislative Information)",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "ccpa-cppa-1798.155",
+      "name": "CCPA/CPRA - administrative fine in an action by the CPPA",
+      "regime": "CCPA/CPRA",
+      "jurisdiction": "US-CA",
+      "enforcer": "California Privacy Protection Agency",
+      "citation": "Cal. Civ. Code s. 1798.155(a)",
+      "scope": "Any violation of the CCPA/CPRA by a business, service provider, contractor or other person; violations involving consumers the business knows are under 16 are always at the higher rate",
+      "penalty_model": "per_violation",
+      "per_violation_amount": 2500,
+      "per_violation_amount_intentional": 7500,
+      "currency": "USD",
+      "aggregation": {
+        "rule": "no_aggregate_cap",
+        "citation": "Cal. Civ. Code s. 1798.155(a)",
+        "description": "No aggregate cap in the statute."
+      },
+      "citation_patterns": ["1798\\.155\\s*\\(\\s*a\\s*\\)"],
+      "inflation_note": "Same inflation adjustment as the AG penalty ($2,663 / $7,988 effective 1 January 2025, secondary source).",
+      "sources": [
+        {
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.155.",
+          "quote": "Any business, service provider, contractor, or other person that violates this title shall be liable for an administrative fine of not more than two thousand five hundred dollars ($2,500) for each violation or seven thousand five hundred dollars ($7,500) for each intentional violation or violations involving the personal information of consumers whom the business ... has actual knowledge are under 16 years of age",
+          "quality": "primary legislation (California Legislative Information)",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "ccpa-1798.150",
+      "name": "CCPA - private right of action for data breaches",
+      "regime": "CCPA/CPRA",
+      "jurisdiction": "US-CA",
+      "enforcer": "Private plaintiffs (class actions)",
+      "citation": "Cal. Civ. Code s. 1798.150(a)(1)(A)",
+      "scope": "Unauthorised access and exfiltration, theft or disclosure of non-encrypted, non-redacted personal information resulting from failure to maintain reasonable security",
+      "penalty_model": "per_consumer_range",
+      "per_violation_min": 100,
+      "per_violation_max": 750,
+      "currency": "USD",
+      "citation_patterns": ["1798\\.150"],
+      "notes": "Statutory damages of $100-$750 per consumer per incident, or actual damages, whichever is greater; the statute states the range is 'as adjusted' so check for a current CPI-adjusted figure. Cure is not available for this claim.",
+      "sources": [
+        {
+          "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201920200SB561",
+          "quote": "To recover damages in an amount not less than one hundred dollars ($100) and not greater than seven hundred and fifty ($750) per consumer per incident or actual damages, whichever is greater.",
+          "quality": "primary legislation (bill text reproducing s.1798.150)",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "coppa-ftc-5l",
+      "name": "COPPA Rule - civil penalty per violation",
+      "regime": "US federal children's privacy",
+      "jurisdiction": "US-Federal",
+      "enforcer": "Federal Trade Commission / Department of Justice",
+      "citation": "15 U.S.C. 45(l), (m)(1)(A)-(B); 16 CFR Part 1 Subpart L; 16 CFR Part 312",
+      "scope": "Violations of the Children's Online Privacy Protection Rule (notice, verifiable parental consent, data retention and disclosure limits)",
+      "penalty_model": "per_violation",
+      "per_violation_amount": 53088,
+      "currency": "USD",
+      "aggregation": {
+        "rule": "no_aggregate_cap",
+        "citation": "15 U.S.C. 45(m)(1)(A)",
+        "description": "No statutory aggregate cap; each violation of a rule or order is a separate penalty."
+      },
+      "citation_patterns": ["COPPA"],
+      "inflation_note": "2025 level of $53,088 continues to apply in 2026: the FTC announced no inflation adjustment for 2026 (Federal Register notice, 15 September 2026).",
+      "sources": [
+        {
+          "url": "https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions",
+          "quote": "A court can hold operators who violate the Rule liable for civil penalties of up to $53,088 per violation.",
+          "quality": "regulator guidance",
+          "retrieved": "2026-10-13"
+        },
+        {
+          "url": "https://www.law.cornell.edu/cfr/text/16/1.98",
+          "quote": "Section 5(m)(1)(A) of the FTC Act, 15 U.S.C. 45(m)(1)(A)-$53,088",
+          "quality": "regulation text (16 CFR 1.98)",
+          "retrieved": "2026-10-13"
+        },
+        {
+          "url": "https://www.federalregister.gov/documents/2026/09/15/2026-18853/civil-penalty-inflation-adjustments",
+          "quote": "the FTC's civil penalty amounts will remain unchanged during 2026. The FTC will continue to apply the 2025 civil penalty levels.",
+          "quality": "Federal Register notice",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "ftc-hbnr",
+      "name": "FTC Health Breach Notification Rule - civil penalty per violation per day",
+      "regime": "US federal health privacy",
+      "jurisdiction": "US-Federal",
+      "enforcer": "Federal Trade Commission / Department of Justice",
+      "citation": "15 U.S.C. 45(m)(1)(A); 16 CFR Part 318 (Health Breach Notification Rule); 16 CFR 1.98",
+      "scope": "Failure by a vendor of personal health records, or a related entity, to notify individuals, the FTC and the media of an unauthorised disclosure of individually identifiable health information",
+      "penalty_model": "per_violation_per_day",
+      "per_violation_amount": 53088,
+      "currency": "USD",
+      "citation_patterns": ["Health Breach Notification Rule"],
+      "notes": "The FTC treats a failure to notify as a continuing violation, so days matter as much as the number of affected individuals; supply a 'days' value in the case spec.",
+      "sources": [
+        {
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2023/02/ftc-enforcement-action-bar-goodrx-sharing-consumers-sensitive-health-info-advertising",
+          "quote": "GoodRx will be prohibited from sharing user health data with applicable third parties for advertising purposes, and has agreed to pay a $1.5 million civil penalty for violating the rule.",
+          "quality": "regulator enforcement action (first HBNR enforcement)",
+          "retrieved": "2026-10-13"
+        },
+        {
+          "url": "https://www.law.cornell.edu/cfr/text/16/1.98",
+          "quote": "Section 5(m)(1)(A) of the FTC Act, 15 U.S.C. 45(m)(1)(A)-$53,088",
+          "quality": "regulation text (16 CFR 1.98)",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "hipaa-160404",
+      "name": "HIPAA - civil money penalty tiers",
+      "regime": "HIPAA",
+      "jurisdiction": "US-Federal",
+      "enforcer": "HHS Office for Civil Rights",
+      "citation": "45 CFR 160.404(b)(2); adjusted amounts at 45 CFR 102.3",
+      "scope": "Violations of the HIPAA Administrative Simplification provisions (Privacy, Security, Breach Notification Rules)",
+      "penalty_model": "per_violation_tiered",
+      "currency": "USD",
+      "annual_cap": 2190294,
+      "default_tier": "tier2",
+      "tiers": [
+        {
+          "id": "tier1",
+          "when": "did not know and, with reasonable diligence, would not have known of the violation",
+          "per_violation_min": 145,
+          "per_violation_max": 73011
+        },
+        {
+          "id": "tier2",
+          "when": "reasonable cause and not willful neglect",
+          "per_violation_min": 1461,
+          "per_violation_max": 73011
+        },
+        {
+          "id": "tier3",
+          "when": "willful neglect, corrected within 30 days",
+          "per_violation_min": 14602,
+          "per_violation_max": 73011
+        },
+        {
+          "id": "tier4",
+          "when": "willful neglect, not corrected within 30 days",
+          "per_violation_min": 73011,
+          "per_violation_max": 2190294
+        }
+      ],
+      "aggregation": {
+        "rule": "annual_identical_violations_cap",
+        "citation": "45 CFR 160.404(b)(2)(i)(B)",
+        "description": "For violations occurring on or after 18 February 2009, the penalty may not exceed the annual cap for identical violations during a calendar year; the cap is the tier-4 maximum."
+      },
+      "citation_patterns": ["160\\.404", "164\\.30[248]", "164\\.40[45]"],
+      "inflation_note": "Per-violation amounts are inflation-adjusted annually under the Federal Civil Penalties Inflation Adjustment Act; the figures here are the latest published pair for each tier in 45 CFR 102.3 (tier maxima 73,011 / annual cap 2,190,294). Re-read 45 CFR 102.3 before relying on them.",
+      "sources": [
+        {
+          "url": "https://www.law.cornell.edu/cfr/text/45/160.404",
+          "quote": "In excess of $1,500,000 for identical violations during a calendar year ... In the amount of more than $100 for each violation",
+          "quality": "regulation text (45 CFR 160.404)",
+          "retrieved": "2026-10-13"
+        },
+        {
+          "url": "https://www.law.cornell.edu/cfr/text/45/102.3",
+          "quote": "45 CFR 160.404(b)(2)(iv)(A),(B) OCR ... Maximum 73,011 ... Calendar Year Cap 2,190,294",
+          "quality": "regulation text (45 CFR 102.3 annual adjustment table)",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "texas-cubi-503001",
+      "name": "Texas CUBI - capture or use of biometric identifier",
+      "regime": "Texas biometric privacy",
+      "jurisdiction": "US-TX",
+      "enforcer": "Texas Attorney General",
+      "citation": "Tex. Bus. & Com. Code s. 503.001(d)",
+      "scope": "Capturing a biometric identifier for a commercial purpose, and related retention/disclosure limits, without the required notice and consent",
+      "penalty_model": "per_violation",
+      "per_violation_amount": 25000,
+      "currency": "USD",
+      "aggregation": {
+        "rule": "no_aggregate_cap",
+        "citation": "Tex. Bus. & Com. Code s. 503.001(d)",
+        "description": "Civil penalty of not more than $25,000 for each violation; the AG's office has treated unauthorised capture and improper storage as separate violations, which can double exposure per individual."
+      },
+      "citation_patterns": ["503\\.001", "CUBI"],
+      "notes": "No private right of action; the AG alone enforces. The per-violation ceiling across a large population is effectively unbounded - the Texas meta-settlement was far below it.",
+      "sources": [
+        {
+          "url": "https://law.justia.com/codes/texas/business-commerce-code/title-11/subtitle-a/chapter-503/section-503-001/",
+          "quote": "(d) A person who violates this section is subject to a civil penalty of not more than $25,000 for each violation. The attorney general may bring an action to recover the civil penalty.",
+          "quality": "primary legislation reproduction",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "texas-tdpsa",
+      "name": "Texas Data Privacy and Security Act - civil penalty",
+      "regime": "Texas comprehensive privacy",
+      "jurisdiction": "US-TX",
+      "enforcer": "Texas Attorney General",
+      "citation": "Tex. Bus. & Com. Code ch. 541 (TDPSA)",
+      "scope": "Violations of TDPSA duties: notice, consent for sensitive data, consumer rights requests, data security, sensitive-data assessment",
+      "penalty_model": "per_violation",
+      "per_violation_amount": 7500,
+      "currency": "USD",
+      "aggregation": {
+        "rule": "no_aggregate_cap",
+        "citation": "Tex. Bus. & Com. Code ch. 541",
+        "description": "Up to $7,500 per violation; a 30-day cure period applies before the AG may act."
+      },
+      "citation_patterns": ["TDPSA", "ch(?:apter)?\\.?\\s*541"],
+      "notes": "Section number for the penalty provision should be pinned to the current codification before filing; the statute has been amended since enactment.",
+      "sources": [
+        {
+          "url": "https://www.jdsupra.com/legalnews/texas-files-first-privacy-law-2196752/",
+          "quote": "The State claims entitlement to more than $1,000,000 in monetary relief, including not more than $7,500 per TDPSA violation",
+          "quality": "law-firm commentary on the AG's first TDPSA enforcement action",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "texas-data-broker",
+      "name": "Texas Data Broker Law - civil penalty",
+      "regime": "Texas data broker registration",
+      "jurisdiction": "US-TX",
+      "enforcer": "Texas Attorney General",
+      "citation": "Tex. Bus. & Com. Code ch. 509 (data broker registration)",
+      "scope": "Failure of a data broker to register, or misrepresentation in an application",
+      "penalty_model": "per_violation",
+      "per_violation_amount": 10000,
+      "currency": "USD",
+      "citation_patterns": ["data broker (?:law|registration)"],
+      "notes": "Secondary-source figure ($10,000 per violation) quoted from the AG's first privacy enforcement pleading; confirm against the codified section text.",
+      "sources": [
+        {
+          "url": "https://www.jdsupra.com/legalnews/texas-files-first-privacy-law-2196752/",
+          "quote": "including not more than $7,500 per TDPSA violation, a $10,000 penalty for violation of the Texas Data Broker Law",
+          "quality": "law-firm commentary on the AG's pleading",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "illinois-bipa-14-20",
+      "name": "Illinois BIPA - statutory damages",
+      "regime": "Illinois biometric privacy",
+      "jurisdiction": "US-IL",
+      "enforcer": "Private plaintiffs (state court / supplemental federal claim)",
+      "citation": "740 ILCS 14/20",
+      "scope": "Violations of BIPA duties: written policy (s.15(a)), notice and written release (s.15(b)), retention schedule (s.15(a)), disclosure limits (s.15(d)), profiting from biometrics (s.15(c))",
+      "penalty_model": "per_violation",
+      "per_violation_amount": 1000,
+      "per_violation_amount_intentional": 5000,
+      "currency": "USD",
+      "aggregation": {
+        "rule": "single_recovery_per_person",
+        "citation": "740 ILCS 14/20 as amended by Public Act 103-0769 (SB 2979, 2024)",
+        "description": "A private entity that collects or discloses the same person's biometric identifier more than once in violation of the Act has committed a single violation for which the person is entitled to at most one recovery. Counts must therefore be distinct persons, not scans."
+      },
+      "citation_patterns": ["740\\s*ILCS\\s*14", "BIPA"],
+      "notes": "Liquidated damages of $1,000 per negligent violation or $5,000 per intentional/reckless violation, plus fees; multiple statutory duties breached against the same person do not create multiple recoveries after the 2024 amendment.",
+      "sources": [
+        {
+          "url": "https://www.ilga.gov/Documents/legislation/ilcs/documents/074000140K20.htm",
+          "quote": "A prevailing party may recover for each violation: (1) against a private entity that negligently violates a provision of this Act, liquidated damages of $1,000 or actual damages, whichever is greater; (2) against a private entity that intentionally or recklessly violates a provision of this Act, liquidated damages of $5,000",
+          "quality": "primary legislation (Illinois General Assembly)",
+          "retrieved": "2026-10-13"
+        },
+        {
+          "url": "https://legiscan.com/IL/text/SB2979/id/2908858",
+          "quote": "Provides that a private entity that more than once collects or discloses a person's biometric identifier or biometric information from the same person in violation of the Act has committed a single violation for which the aggrieved person is entitled to, at most, one recovery.",
+          "quality": "bill text / public act summary",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "colorado-cpa",
+      "name": "Colorado Privacy Act - civil penalty",
+      "regime": "Colorado comprehensive privacy",
+      "jurisdiction": "US-CO",
+      "enforcer": "Colorado Attorney General",
+      "citation": "Colo. Rev. Stat. s. 6-1-1315; penalties via s. 6-1-112",
+      "scope": "Violations of the Colorado Privacy Act, enforced as deceptive trade practices under the Colorado Consumer Protection Act",
+      "penalty_model": "per_violation",
+      "per_violation_amount": 20000,
+      "currency": "USD",
+      "citation_patterns": ["Colorado Privacy Act", "C\\.R\\.S\\.\\s*6-1-13"],
+      "notes": "No statutory aggregate cap since 2019. The $20,000 figure is the Colorado Consumer Protection Act maximum per violation; the CPA does not set its own number. Confirm the current cap before relying on it.",
+      "sources": [
+        {
+          "url": "https://coag.gov/resources/colorado-privacy-act/",
+          "quote": "The CPA tasked the Colorado Attorney General with implementing and enforcing the CPA ... The CPA is a part of the State of Colorado's Consumer Protection Act",
+          "quality": "regulator guidance (enforcement mechanism)",
+          "retrieved": "2026-10-13"
+        },
+        {
+          "url": "https://www.recordinglaw.com/us-laws/data-privacy-laws/colorado-data-privacy-laws/",
+          "quote": "Violations are deceptive trade practices under the Colorado Consumer Protection Act, with civil penalties up to $20,000 per violation and no cap on aggregate penalties since 2019",
+          "quality": "secondary aggregator",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "id": "washington-mhmd-19.373.090",
+      "name": "Washington My Health My Data Act - penalties via the Consumer Protection Act",
+      "regime": "Washington consumer health data",
+      "jurisdiction": "US-WA",
+      "enforcer": "Washington Attorney General and private plaintiffs",
+      "citation": "RCW 19.373.090; RCW 19.86.140 (penalty); RCW 19.86.090 (private action)",
+      "scope": "Violations of the My Health My Data Act: consumer health data privacy policy, consent for collection/sharing, rights requests, security, geofencing restrictions, sale of health data",
+      "penalty_model": "per_violation",
+      "per_violation_amount": 7500,
+      "currency": "USD",
+      "citation_patterns": ["RCW\\s*19\\.373", "My Health My Data"],
+      "notes": "RCW 19.373.090 makes a violation an unfair or deceptive act under the Consumer Protection Act (RCW 19.86); the Attorney General may seek up to $7,500 per violation under RCW 19.86.140, and consumers have a private right of action for actual damages, fees and injunctive relief.",
+      "sources": [
+        {
+          "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.373",
+          "quote": "Chapter 19.373 RCW - WASHINGTON MY HEALTH MY DATA ACT ... 19.373.090 Application of consumer protection act",
+          "quality": "primary legislation (Washington State Legislature section index)",
+          "retrieved": "2026-10-13"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+SYNTHETIC TEST FIXTURE - not a real complaint. Written for this prototype to
+exercise the parser with realistic enforcement language. Do not cite.
+
+COMPLAINT (excerpt, style of a DPA-framed cross-border transfers complaint)
+
+1. The complainant is a user of the respondent's consumer messaging service,
+which is offered in the Union and processed by the respondent's Irish
+establishment.
+
+2. The respondent transferred personal data of approximately 533 million users
+to servers in the United States for the purpose of operating its advertising
+business. Those transfers continued after the Court of Justice of the European
+Union annulled the adequacy decision on which the respondent had relied.
+
+3. The respondent invoked standard contractual clauses as its transfer tool but
+did not adopt supplementary measures. The complainant submits that the
+respondent thereby infringed Article 46(1) GDPR, and that the infringement is
+subject to administrative fines under Art. 83(5) GDPR because the provisions
+breached fall within Article 44 to 49.
+
+4. Separately, the respondent failed to maintain appropriate technical and
+organisational measures to ensure a level of security appropriate to the risk,
+contrary to Article 32 GDPR. An internal audit identified misconfigured storage
+buckets affecting 4.2 million accounts, and the respondent did not notify the
+supervisory authority of that breach within the period required by Article 33
+GDPR. The complainant submits that these infringements fall within Art. 83(4)
+GDPR.
+
+5. The respondent was previously the subject of an infringement finding by the
+supervisory authority in 2021, and the processing described above continued for
+at least 38 months after the complainant first raised it with the respondent.
+
+6. The complainant asks the supervisory authority to impose an administrative
+fine, and notes that the supervisory authority has previously fined the
+respondent EUR 225 million for transparency infringements and EUR 405 million
+for processing children's data.

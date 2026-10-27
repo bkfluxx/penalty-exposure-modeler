@@ -1,0 +1,450 @@
+{
+  "case_id": "ACME-US-2026-002",
+  "entity": "Acme Wellness, Inc.",
+  "jurisdiction": "US-CA",
+  "as_of": "2026-10-13",
+  "factor_multiplier": 1.0,
+  "factor_trace": [
+    {
+      "factor": "remediation",
+      "strength": 0.5,
+      "effect": "-5.0%",
+      "citation": "GDPR Art. 83(2)(c)"
+    },
+    {
+      "factor": "prior_infringements",
+      "strength": 1.0,
+      "effect": "+25.0%",
+      "citation": "GDPR Art. 83(2)(e); CPPA enforcement policy on repeat conduct"
+    },
+    {
+      "factor": "intentional",
+      "strength": 1.0,
+      "effect": "+25.0%",
+      "citation": "GDPR Art. 83(2)(b); Cal. Civ. Code s.1798.155 (intentional violations)"
+    },
+    {
+      "factor": "clamp",
+      "strength": null,
+      "effect": "1.484 -> 1.000",
+      "citation": null,
+      "note": "multiplier clamped: the statutory ceiling cannot be exceeded and the floor is 5% of the ceiling"
+    }
+  ],
+  "violations": [
+    {
+      "statute_id": "ccpa-ag-1798.155",
+      "citation": "Cal. Civ. Code 1798.155(b)",
+      "statute_name": "CCPA/CPRA - civil penalty in an action by the Attorney General",
+      "jurisdiction": "US-CA",
+      "count": 3400000,
+      "ceiling": {
+        "min": 0.0,
+        "max": 8500000000.0,
+        "currency": "USD",
+        "basis": "3,400,000 violation(s) x 2,500 USD per violation",
+        "aggregation_rule": "no_aggregate_cap",
+        "aggregation_citation": "Cal. Civ. Code s. 1798.155(b)"
+      },
+      "factor_multiplier": 1.0,
+      "calibration": "settlement-to-ceiling calibration: 7 comparable matter(s) settled for the equivalent of a median 560 and a 25th-percentile 340 violation-equivalents (amount / 2,500 USD per violation); against the 3,400,000 charged here that is 0.0165% / 0.0100% of the arithmetic ceiling",
+      "calibration_mode": "settlement_to_ceiling",
+      "band": {
+        "low": 850000.0,
+        "expected": 1400000.0,
+        "max": 8500000000.0,
+        "currency": "USD"
+      },
+      "comparables": {
+        "n": 7,
+        "ids": [
+          "healthline-2023",
+          "sephora-2022",
+          "doordash-2024",
+          "tilting-point-2024",
+          "jam-city-2025",
+          "disney-2026",
+          "general-motors-2026"
+        ],
+        "partial_match": false,
+        "award_band": {
+          "min": 375000.0,
+          "p25": 850000.0,
+          "median": 1400000.0,
+          "p75": 2150000.0,
+          "p90": 6750000.000000004,
+          "max": 12750000.0,
+          "mean": 2932142.8571428573,
+          "n": 7
+        },
+        "ratio_band": null
+      },
+      "notes": [
+        "count basis: consumers whose personal information was sold without notice or opt-out (complaint, para 1)"
+      ]
+    },
+    {
+      "statute_id": "texas-cubi-503001",
+      "citation": "Tex. Bus. & Com. Code 503.001",
+      "statute_name": "Texas CUBI - capture or use of biometric identifier",
+      "jurisdiction": "US-TX",
+      "count": 900000,
+      "ceiling": {
+        "min": 0.0,
+        "max": 22500000000.0,
+        "currency": "USD",
+        "basis": "900,000 violation(s) x 25,000 USD per violation",
+        "aggregation_rule": "no_aggregate_cap",
+        "aggregation_citation": "Tex. Bus. & Com. Code s. 503.001(d)"
+      },
+      "factor_multiplier": 1.0,
+      "calibration": "settlement-to-ceiling calibration: 2 comparable matter(s) settled for the equivalent of a median 55,500 and a 25th-percentile 55,250 violation-equivalents (amount / 25,000 USD per violation); against the 900,000 charged here that is 6.1667% / 6.1389% of the arithmetic ceiling",
+      "calibration_mode": "settlement_to_ceiling",
+      "band": {
+        "low": 1381250000.0,
+        "expected": 1387500000.0,
+        "max": 22500000000.0,
+        "currency": "USD"
+      },
+      "comparables": {
+        "n": 2,
+        "ids": [
+          "texas-v-meta-2024",
+          "texas-v-google-2025"
+        ],
+        "partial_match": false,
+        "award_band": {
+          "min": 1375000000.0,
+          "p25": 1381250000.0,
+          "median": 1387500000.0,
+          "p75": 1393750000.0,
+          "p90": 1397500000.0,
+          "max": 1400000000.0,
+          "mean": 1387500000.0,
+          "n": 2
+        },
+        "ratio_band": null
+      },
+      "notes": [
+        "count basis: consumers whose face geometry templates were captured (complaint, para 3)"
+      ]
+    },
+    {
+      "statute_id": "washington-mhmd-19.373.090",
+      "citation": "RCW 19.373.030 via RCW 19.373.090",
+      "statute_name": "Washington My Health My Data Act - penalties via the Consumer Protection Act",
+      "jurisdiction": "US-WA",
+      "count": 210000,
+      "ceiling": {
+        "min": 0.0,
+        "max": 1575000000.0,
+        "currency": "USD",
+        "basis": "210,000 violation(s) x 7,500 USD per violation",
+        "aggregation_rule": null,
+        "aggregation_citation": null
+      },
+      "factor_multiplier": 1.0,
+      "calibration": "settlement-to-ceiling calibration: 2 comparable matter(s) settled for the equivalent of a median 1,167 and a 25th-percentile 683 violation-equivalents (amount / 7,500 USD per violation); against the 210,000 charged here that is 0.5556% / 0.3254% of the arithmetic ceiling",
+      "calibration_mode": "settlement_to_ceiling",
+      "band": {
+        "low": 5125000.000000001,
+        "expected": 8750000.0,
+        "max": 1575000000.0,
+        "currency": "USD"
+      },
+      "comparables": {
+        "n": 2,
+        "ids": [
+          "anthem-2018-hipaa",
+          "goodrx-2023-hbnr"
+        ],
+        "partial_match": true,
+        "award_band": {
+          "min": 1500000.0,
+          "p25": 5125000.0,
+          "median": 8750000.0,
+          "p75": 12375000.0,
+          "p90": 14550000.0,
+          "max": 16000000.0,
+          "mean": 8750000.0,
+          "n": 2
+        },
+        "ratio_band": null
+      },
+      "notes": [
+        "count basis: consumers whose health data was sold without valid authorisation (complaint, para 4)"
+      ]
+    },
+    {
+      "statute_id": "hipaa-160404",
+      "citation": "45 CFR 164.312 via 45 CFR 160.404",
+      "statute_name": "HIPAA - civil money penalty tiers",
+      "jurisdiction": "US-Federal",
+      "count": 14000,
+      "ceiling": {
+        "min": 204428000.0,
+        "max": 2190294.0,
+        "currency": "USD",
+        "basis": "tier tier3 (willful neglect, corrected within 30 days): 14,000 violation(s) x 14,602-73,011 USD per violation; capped at annual limit 2,190,294 USD",
+        "aggregation_rule": "annual_identical_violations_cap",
+        "aggregation_citation": "45 CFR 160.404(b)(2)(i)(B)"
+      },
+      "factor_multiplier": 1.0,
+      "calibration": "documented default ratios (median 0.050, low 0.010) - no usable comparable set for this regime",
+      "calibration_mode": "default",
+      "band": {
+        "low": 21902.94,
+        "expected": 109514.70000000001,
+        "max": 2190294.0,
+        "currency": "USD"
+      },
+      "comparables": {
+        "n": 1,
+        "ids": [
+          "anthem-2018-hipaa"
+        ],
+        "partial_match": false,
+        "award_band": {
+          "min": 16000000.0,
+          "p25": 16000000.0,
+          "median": 16000000.0,
+          "p75": 16000000.0,
+          "p90": 16000000.0,
+          "max": 16000000.0,
+          "mean": 16000000.0,
+          "n": 1
+        },
+        "ratio_band": null
+      },
+      "notes": [
+        "count basis: records exposed by the access-control failure, corrected within 30 days (complaint, para 5)"
+      ]
+    },
+    {
+      "statute_id": "coppa-ftc-5l",
+      "citation": "16 CFR Part 312 (COPPA Rule)",
+      "statute_name": "COPPA Rule - civil penalty per violation",
+      "jurisdiction": "US-Federal",
+      "count": 45000,
+      "ceiling": {
+        "min": 0.0,
+        "max": 2388960000.0,
+        "currency": "USD",
+        "basis": "45,000 violation(s) x 53,088 USD per violation",
+        "aggregation_rule": "no_aggregate_cap",
+        "aggregation_citation": "15 U.S.C. 45(m)(1)(A)"
+      },
+      "factor_multiplier": 1.0,
+      "calibration": "settlement-to-ceiling calibration: 2 comparable matter(s) settled for the equivalent of a median 2,595 and a 25th-percentile 1,302 violation-equivalents (amount / 53,088 USD per violation); against the 45,000 charged here that is 5.7661% / 2.8935% of the arithmetic ceiling",
+      "calibration_mode": "settlement_to_ceiling",
+      "band": {
+        "low": 69124999.99999999,
+        "expected": 137750000.0,
+        "max": 2388960000.0,
+        "currency": "USD"
+      },
+      "comparables": {
+        "n": 2,
+        "ids": [
+          "epic-games-2022-coppa",
+          "tilting-point-2024"
+        ],
+        "partial_match": false,
+        "award_band": {
+          "min": 500000.0,
+          "p25": 69125000.0,
+          "median": 137750000.0,
+          "p75": 206375000.0,
+          "p90": 247550000.0,
+          "max": 275000000.0,
+          "mean": 137750000.0,
+          "n": 2
+        },
+        "ratio_band": null
+      },
+      "notes": [
+        "count basis: child accounts collected without verifiable parental consent (complaint, para 6)"
+      ]
+    },
+    {
+      "statute_id": "ftc-hbnr",
+      "citation": "16 CFR Part 318 (Health Breach Notification Rule)",
+      "statute_name": "FTC Health Breach Notification Rule - civil penalty per violation per day",
+      "jurisdiction": "US-Federal",
+      "count": 210000,
+      "ceiling": {
+        "min": 0.0,
+        "max": 1003363200000.0,
+        "currency": "USD",
+        "basis": "210,000 violation(s) x 90 day(s) x 53,088 USD per violation per day",
+        "aggregation_rule": null,
+        "aggregation_citation": null
+      },
+      "factor_multiplier": 1.0,
+      "calibration": "settlement-to-ceiling calibration (single comparable - treat as indicative): 1 comparable matter(s) settled for the equivalent of a median 28 and a 25th-percentile 28 violation-equivalents (amount / 53,088 USD per violation); against the 18,900,000 charged here that is 0.0001% / 0.0001% of the arithmetic ceiling",
+      "calibration_mode": "settlement_to_ceiling",
+      "band": {
+        "low": 1500000.0000000002,
+        "expected": 1500000.0000000002,
+        "max": 1003363200000.0,
+        "currency": "USD"
+      },
+      "comparables": {
+        "n": 1,
+        "ids": [
+          "goodrx-2023-hbnr"
+        ],
+        "partial_match": false,
+        "award_band": {
+          "min": 1500000.0,
+          "p25": 1500000.0,
+          "median": 1500000.0,
+          "p75": 1500000.0,
+          "p90": 1500000.0,
+          "max": 1500000.0,
+          "mean": 1500000.0,
+          "n": 1
+        },
+        "ratio_band": null
+      },
+      "notes": [
+        "count basis: affected consumers, times 90 days during which notification was not made"
+      ]
+    }
+  ],
+  "contributions": [
+    {
+      "label": "Cal. Civ. Code 1798.155(b)",
+      "low": 850000.0,
+      "expected": 1400000.0,
+      "max": 8500000000.0,
+      "currency": "USD",
+      "statute_ids": [
+        "ccpa-ag-1798.155"
+      ],
+      "rule": null
+    },
+    {
+      "label": "Tex. Bus. & Com. Code 503.001",
+      "low": 1381250000.0,
+      "expected": 1387500000.0,
+      "max": 22500000000.0,
+      "currency": "USD",
+      "statute_ids": [
+        "texas-cubi-503001"
+      ],
+      "rule": null
+    },
+    {
+      "label": "RCW 19.373.030 via RCW 19.373.090",
+      "low": 5125000.000000001,
+      "expected": 8750000.0,
+      "max": 1575000000.0,
+      "currency": "USD",
+      "statute_ids": [
+        "washington-mhmd-19.373.090"
+      ],
+      "rule": null
+    },
+    {
+      "label": "45 CFR 164.312 via 45 CFR 160.404",
+      "low": 21902.94,
+      "expected": 109514.70000000001,
+      "max": 2190294.0,
+      "currency": "USD",
+      "statute_ids": [
+        "hipaa-160404"
+      ],
+      "rule": null
+    },
+    {
+      "label": "16 CFR Part 312 (COPPA Rule)",
+      "low": 69124999.99999999,
+      "expected": 137750000.0,
+      "max": 2388960000.0,
+      "currency": "USD",
+      "statute_ids": [
+        "coppa-ftc-5l"
+      ],
+      "rule": null
+    },
+    {
+      "label": "16 CFR Part 318 (Health Breach Notification Rule)",
+      "low": 1500000.0000000002,
+      "expected": 1500000.0000000002,
+      "max": 1003363200000.0,
+      "currency": "USD",
+      "statute_ids": [
+        "ftc-hbnr"
+      ],
+      "rule": null
+    }
+  ],
+  "case_band": {
+    "low": 1457871902.94,
+    "expected": 1537009514.7,
+    "max": 1038329350294.0,
+    "currency": "USD"
+  },
+  "subtotals": {
+    "USD": {
+      "low": 1457871902.94,
+      "expected": 1537009514.7,
+      "max": 1038329350294.0,
+      "violations": 6,
+      "conversion": null
+    }
+  },
+  "aggregation_notes": [],
+  "precedent_view": {
+    "n_comparables": 12,
+    "ids": [
+      "anthem-2018-hipaa",
+      "disney-2026",
+      "doordash-2024",
+      "epic-games-2022-coppa",
+      "general-motors-2026",
+      "goodrx-2023-hbnr",
+      "healthline-2023",
+      "jam-city-2025",
+      "sephora-2022",
+      "texas-v-google-2025",
+      "texas-v-meta-2024",
+      "tilting-point-2024"
+    ],
+    "award_band": {
+      "min": 375000.0,
+      "p25": 1350000.0,
+      "median": 2150000.0,
+      "p75": 80750000.0,
+      "p90": 1265000000.0000005,
+      "max": 1400000000.0,
+      "mean": 257335416.66666666,
+      "n": 12
+    },
+    "ratio_band": null,
+    "sectors": [
+      "adtech",
+      "health",
+      "kids",
+      "media",
+      "retail",
+      "social_media",
+      "transport"
+    ],
+    "method": "fixed/turnover regimes are calibrated on the observed award-to-ceiling ratio (median -> expected, p25 -> low); per-violation regimes are calibrated on the violation-equivalents the comparable settlements actually bought (amount / per-violation amount, median and p25). Defaults are used, and flagged, where neither is available."
+  },
+  "confidence": {
+    "level": "high",
+    "reasons": [
+      "entity turnover supplied (turnover-linked caps computed)",
+      "5 charged violation(s) carry a band calibrated on comparable decided matters",
+      "per-violation counts were supplied/read from source text"
+    ]
+  },
+  "warnings": [],
+  "trace": [
+    "factor multiplier applied to every statutory ceiling: 1.000"
+  ],
+  "disclaimer": "Prototype triage output, not legal advice. Statutory amounts and precedent records are sourced (see data/*.json 'sources') but carry an 'as_of' date; verify before relying on them. The expected/low values are calibrated heuristics, not predictions of any particular regulator's decision."
+}

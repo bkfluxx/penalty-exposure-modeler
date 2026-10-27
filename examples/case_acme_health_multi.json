@@ -1,0 +1,65 @@
+{
+  "case_id": "ACME-US-2026-002",
+  "entity": {
+    "name": "Acme Wellness, Inc.",
+    "sector": "health",
+    "global_annual_turnover": {
+      "amount": 120000000,
+      "currency": "USD"
+    }
+  },
+  "jurisdiction": "US-CA",
+  "display_currency": "USD",
+  "alleged_violations": [
+    {
+      "statute_id": "ccpa-ag-1798.155",
+      "citation": "Cal. Civ. Code 1798.155(b)",
+      "count": 3400000,
+      "count_basis": "consumers whose personal information was sold without notice or opt-out (complaint, para 1)",
+      "intentional": false
+    },
+    {
+      "statute_id": "texas-cubi-503001",
+      "citation": "Tex. Bus. & Com. Code 503.001",
+      "count": 900000,
+      "count_basis": "consumers whose face geometry templates were captured (complaint, para 3)"
+    },
+    {
+      "statute_id": "washington-mhmd-19.373.090",
+      "citation": "RCW 19.373.030 via RCW 19.373.090",
+      "count": 210000,
+      "count_basis": "consumers whose health data was sold without valid authorisation (complaint, para 4)"
+    },
+    {
+      "statute_id": "hipaa-160404",
+      "citation": "45 CFR 164.312 via 45 CFR 160.404",
+      "count": 14000,
+      "tier": "tier3",
+      "count_basis": "records exposed by the access-control failure, corrected within 30 days (complaint, para 5)"
+    },
+    {
+      "statute_id": "coppa-ftc-5l",
+      "citation": "16 CFR Part 312 (COPPA Rule)",
+      "count": 45000,
+      "count_basis": "child accounts collected without verifiable parental consent (complaint, para 6)"
+    },
+    {
+      "statute_id": "ftc-hbnr",
+      "citation": "16 CFR Part 318 (Health Breach Notification Rule)",
+      "count": 210000,
+      "days": 90,
+      "count_basis": "affected consumers, times 90 days during which notification was not made"
+    }
+  ],
+  "factors": {
+    "cooperation": false,
+    "remediation": 0.5,
+    "prior_infringements": true,
+    "intentional": true
+  },
+  "provenance": {
+    "mode": "hypothetical multi-regime case written for the prototype, counts taken from the parser fixture",
+    "review_required": false,
+    "notes": "Demonstrates per-violation, per-day and tiered regimes in one case, and shows why an arithmetic ceiling must never be read as a forecast."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "case_id": "ACME-EU-2026-001",
+  "entity": {
+    "name": "Acme Messaging Ireland Ltd",
+    "sector": "social_media",
+    "global_annual_turnover": {
+      "amount": 480000000,
+      "currency": "EUR",
+      "fiscal_year": 2025
+    }
+  },
+  "jurisdiction": "EU/EEA",
+  "display_currency": "EUR",
+  "alleged_violations": [
+    {
+      "statute_id": "gdpr-art83-5",
+      "citation": "Art. 46(1) GDPR",
+      "count": 2400000,
+      "count_basis": "users whose personal data was transferred to the US (complaint, para 2)",
+      "notes": "Higher tier: transfers are listed in Art. 83(5)."
+    },
+    {
+      "statute_id": "gdpr-art83-4",
+      "citation": "Art. 32 GDPR",
+      "count": 1,
+      "count_basis": "single failure of security of processing; counts are not per data subject in the decision practice",
+      "notes": "Lower tier: security obligations are listed in Art. 83(4)."
+    }
+  ],
+  "factors": {
+    "cooperation": 0.6,
+    "self_reporting": true,
+    "remediation": true,
+    "no_prior_infringements": true,
+    "duration_months": 30
+  },
+  "provenance": {
+    "mode": "hypothetical case written for the prototype",
+    "review_required": false,
+    "notes": "Turnover is invented for the demo; the comparables are real decided matters."
+  }
+}

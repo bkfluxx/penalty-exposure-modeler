@@ -1,0 +1,36 @@
+SYNTHETIC TEST FIXTURE - not a real complaint. Written for this prototype to
+exercise the parser on a US state-attorney-general style pleading with
+per-violation counts.
+
+COMPLAINT FOR CIVIL PENALTIES AND INJUNCTIVE RELIEF
+
+1. Plaintiff alleges that the defendant, operator of a consumer wellness
+application with 3.4 million users, sold the personal information of
+3,400,000 consumers to advertising partners without providing notice or an
+opportunity to opt out, in violation of the California Consumer Privacy Act.
+
+2. The defendant failed to process opt-out requests submitted through
+user-enabled global privacy controls, and failed to cure the alleged violations
+within 30 days of notice. Plaintiff seeks a civil penalty of up to $7,500 for
+each intentional violation under Cal. Civ. Code 1798.155.
+
+3. The defendant also collected face geometry templates from 900,000 consumers
+residing in Texas for the purpose of emotion detection, without providing the
+notice and obtaining the consent required by Texas law.
+
+4. Employees of the defendant, acting on the defendant's behalf, shared
+consumer health data with third parties in exchange for payment, without
+obtaining valid authorisation from 210,000 consumers, in violation of RCW
+19.373.
+
+5. The defendant is a covered entity and failed to implement access controls
+across 14,000 records, and did not correct the deficiency within 30 days of
+discovering it, contrary to 45 CFR 164.312.
+
+6. The defendant's subsidiary collected the personal information of
+children under 13 in its mobile game without verifiable parental consent, and
+failed to provide the notices required by the Children's Online Privacy
+Protection Rule.
+
+7. The defendant previously paid $375,000 to resolve allegations that it sold
+personal information without notice, and $1.2 million in a related settlement.
